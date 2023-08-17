@@ -1,6 +1,6 @@
 from manim import *
 
-class Test(ThreeDScene):
+class BlockID(ThreeDScene):
     def construct(self):
         # Create cube 27 times larger than default size
         cube = Cube(side_length=3)
@@ -105,7 +105,7 @@ class Test(ThreeDScene):
 
         self.wait(1)
 
-class Test2(Scene):
+class ThreadID(Scene):
     def construct(self):
         # draw a rectangle with 12 vertical lines inside it
         rectangle = Rectangle(height=3, width=4)
@@ -129,11 +129,11 @@ class Test2(Scene):
         
         self.play(FadeOut(text3), FadeOut(text1), FadeOut(text2))
 
-        text4 = Text("Thread at position (3, 1)").shift([0, 3, 0]).scale(0.6)
+        text4 = Text("Thread at position (2, 2)").shift([0, 3, 0]).scale(0.6)
         self.play(Write(text4))
         self.play(text4[16:21].animate.set_color(RED), squiggles[10].animate.set_color(RED))
         self.wait(1)
-        self.play(FadeOut(text4))
+        # self.play(FadeOut(text4))
 
         formula = Text("Local Thread ID = 10").shift([0, -2.5, 0]).scale(0.6)
         self.play(Write(formula))
