@@ -169,7 +169,7 @@ class ThreadID(Scene):
         self.wait(1)
         self.play(squiggles[8:10].animate.set_color(WHITE), formula4.animate.set_color(WHITE))
 
-        self.play(FadeIn(text3), FadeOut(rectangle), FadeOut(squiggles), formula4.animate.shift([0, 2.5, 0]))
+        self.play(FadeIn(text3), FadeOut(rectangle), FadeOut(squiggles), formula4.animate.shift([0, 2.5, 0]), FadeOut(text4))
 
         text3copy = text3[:-2].copy()
         formula4copy = formula4[:13].copy()
